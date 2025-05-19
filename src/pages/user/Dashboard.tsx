@@ -12,6 +12,7 @@ import { Car, User, LogOut } from "lucide-react";
 const UserDashboard: React.FC = () => {
   const { user, logout } = useAuth();
 
+
   const { data: vehiclesData } = useQuery({
     queryKey: ["userVehicles"],
     queryFn: () => vehicleApi.getVehicles(1, 100),

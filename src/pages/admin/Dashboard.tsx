@@ -10,7 +10,8 @@ import { LogOut, Car } from "lucide-react";
 import ParkingSlots from "./ParkingSlots";
 
 const AdminDashboard: React.FC = () => {
-  const { user, logout } = useAuth();
+  const user=localStorage.getItem("user");
+
 
   const {
     data: vehiclesData,

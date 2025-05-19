@@ -129,6 +129,8 @@ export const parkingSlotApi = {
     });
     return normalizePaginatedResponse<ParkingSlot>(response.data, page, limit);
   },
+  
+
 
   createSlot: async (slotData: Omit<ParkingSlot, "id">) => {
     const response = await api.post("/slots/create", slotData);

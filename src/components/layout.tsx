@@ -2,10 +2,15 @@
 import React from "react";
 import { Link, useLocation, Outlet } from "react-router-dom";
 import { Car } from "lucide-react";
+import { useAuth } from "@/context/AuthContext";
 
 const Layout: React.FC = () => {
+  const { user, logout } = useAuth();
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
+
+
+  
 
   return (
     <div className="flex flex-col min-h-screen">

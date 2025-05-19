@@ -21,6 +21,9 @@ const Login: React.FC = () => {
 
     try {
       const response = await login(email, password);
+
+      localStorage.setItem("user",response.data)
+      
       
       if (response.user.role === "ADMIN") {
         navigate("/admin/dashboard");
